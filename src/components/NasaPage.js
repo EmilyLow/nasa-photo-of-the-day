@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NasaPhoto from "./NasaPhoto";
 import Description from "./Description";
+import Date from "./Date";
 
 const NasaPage = props => {
     
@@ -14,6 +15,7 @@ const NasaPage = props => {
       <div>
          
           <NasaPhoto image = {props.passedData.url}/>
+          <Date date = {props.passedData.date}/>
           <Description description = {props.passedData.explanation}/>
       </div>
     );
