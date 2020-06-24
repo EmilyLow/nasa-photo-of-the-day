@@ -8,10 +8,11 @@ export default function App() {
   const [spaceData, setSpaceData] = useState();
   
   useEffect(() => {
-    //axios
+    
     axios
     .get("https://api.nasa.gov/planetary/apod?api_key=YR2NA3Adi0auTkwDJqvQUhl9UOTT7SX3KkwCvdCn")
     .then( res => {
+      //It also fails to update if testVar is a number
       let testVar = res.data;
       //console.log("Get result:", res);
       //console.log("Get data result:", res.data);
@@ -36,7 +37,7 @@ export default function App() {
     // </div>
     <div>
       <h1>Nasa Picture</h1>
-       <NasaPage data/>
+       <NasaPage spaceData = {spaceData}/>
     </div>
     
   );
