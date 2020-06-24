@@ -10,7 +10,7 @@ import NasaPage from "./components/NasaPage.js"
 
 
 export default function App() {
-  const [spaceData, setSpaceData] = useState();
+  const [spaceData, setSpaceData] = useState([]);
   
   //Commented out while making
   useEffect(() => {
@@ -43,7 +43,8 @@ export default function App() {
     // </div>
     <div>
       <h1>Nasa Picture</h1>
-       <NasaPage passedData = {spaceData}/>
+       {/* <NasaPage passedData = {spaceData}/> */}
+       <NasaPage image = {spaceData.url} description = {spaceData.explanation}/>
     </div>
     
   );
