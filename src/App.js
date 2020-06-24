@@ -4,15 +4,20 @@ import "./App.css";
 import axios from 'axios';
 import NasaPage from "./components/NasaPage.js"
 
-function App() {
-  const [photo, setPhoto] = useState([]);
+export default function App() {
+  const [spaceData, setSpaceData] = useState();
   
   useEffect(() => {
     //axios
     axios
-    .get("")
+    .get("https://api.nasa.gov/planetary/apod?api_key=YR2NA3Adi0auTkwDJqvQUhl9UOTT7SX3KkwCvdCn")
     .then( res => {
-      console.log(res);
+      let testVar = res.data;
+      //console.log("Get result:", res);
+      //console.log("Get data result:", res.data);
+      console.log("Test var", testVar)
+      setSpaceData(testVar);
+      console.log("Space data after", spaceData);
     })
     .catch(err => {
       console.log(err);
@@ -31,10 +36,9 @@ function App() {
     // </div>
     <div>
       <h1>Nasa Picture</h1>
-       <NasaPage />
+       <NasaPage data/>
     </div>
     
   );
-}
+};
 
-export default App;
