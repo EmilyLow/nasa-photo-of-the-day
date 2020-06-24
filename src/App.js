@@ -13,6 +13,8 @@ export default function App() {
   const [spaceData, setSpaceData] = useState([]);
   
   //Commented out while making
+  //https://api.nasa.gov/planetary/apod?api_key=YR2NA3Adi0auTkwDJqvQUhl9UOTT7SX3KkwCvdCn&date=1995-06-16
+  //Optional date modifier: &date=2019-06-16
   useEffect(() => {
     
     axios
@@ -43,8 +45,8 @@ export default function App() {
     // </div>
     <div>
       <h1>Nasa Picture</h1>
-       {/* <NasaPage passedData = {spaceData}/> */}
-       <NasaPage image = {spaceData.url} description = {spaceData.explanation}/>
+       <NasaPage passedData = {spaceData}/>
+       {/* <NasaPage image = {spaceData.url} description = {spaceData.explanation}/> */}
     </div>
     
   );
