@@ -16,25 +16,25 @@ export default function App() {
   //https://api.nasa.gov/planetary/apod?api_key=YR2NA3Adi0auTkwDJqvQUhl9UOTT7SX3KkwCvdCn&date=1995-06-16
   //Optional date modifier: &date=2019-06-16
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    axios
-    .get("https://api.nasa.gov/planetary/apod?api_key=YR2NA3Adi0auTkwDJqvQUhl9UOTT7SX3KkwCvdCn")
-    .then( res => {
+  //   axios
+  //   .get("https://api.nasa.gov/planetary/apod?api_key=YR2NA3Adi0auTkwDJqvQUhl9UOTT7SX3KkwCvdCn")
+  //   .then( res => {
       
-      setSpaceData(res.data);
+  //     setSpaceData(res.data);
       
-    })
-    .catch(err => {
-    });
+  //   })
+  //   .catch(err => {
+  //   });
 
 
-  }, []);
+  // }, []);
   
   //For testing only
-  // useEffect(() => {
-  //   setSpaceData(dummyData);
-  // }, []);
+  useEffect(() => {
+    setSpaceData(dummyData);
+  }, []);
  
   
   return (
