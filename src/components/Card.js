@@ -9,10 +9,10 @@ const Example = (props) => {
     console.log(props.allProps.src);
   return (
     <div>
-      <Card>
+      <Card body inverse color="primary">
         <CardImg top width="100%" src={props.allProps.url} alt="Card image cap" />
         <CardBody>
-          <CardTitle>{props.allProps.title}</CardTitle>
+          <CardTitle >{props.allProps.title}</CardTitle>
           <CardSubtitle>{props.allProps.date}</CardSubtitle>
           <CardText>{props.allProps.explanation}</CardText>
           {/* <Button>Button</Button> */}
