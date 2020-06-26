@@ -6,23 +6,23 @@ import Title from "./Title";
 import Card from "./Card";
 
 //Normal version
-// const NasaPage = props => {
+const NasaPage = props => {
     
-//     //console.log("Nasa Page props", props);
-//     //console.log("Passed data", props.passedData);
+    //console.log("Nasa Page props", props);
+    //console.log("Passed data", props.passedData);
     
-//     if(!props.passedData.url) return <h3>Loading...</h3>;
+    if(!props.passedData.url) return <h3>Loading...</h3>;
     
-//     return (
+    return (
         
-//       <div>
-//          <Title title={props.passedData.title}/>
-//           <NasaPhoto image = {props.passedData.url}/>
-//           <Date date = {props.passedData.date}/>
-//           <Description description = {props.passedData.explanation}/>
-//       </div>
-//     );
-//   };
+      <div>
+         <Title title={props.passedData.title}/>
+          <NasaPhoto image = {props.passedData.url}/>
+          <Date date = {props.passedData.date}/>
+          <Description description = {props.passedData.explanation}/>
+      </div>
+    );
+  };
 
 
 //Individually passed version
@@ -43,15 +43,15 @@ import Card from "./Card";
 
 
 //Card Version
-const NasaPage = props => {
+// const NasaPage = props => {
     
-  if(!props.passedData.url) return <h3>Loading...</h3>;
-  return (
-    <div>
-       <Card allProps = {props.passedData}/>
-    </div>
-  );
-};
+//   if(!props.passedData.url) return <h3>Loading...</h3>;
+//   return (
+//     <div>
+//        <Card allProps = {props.passedData}/>
+//     </div>
+//   );
+// };
 
 
       export default NasaPage;

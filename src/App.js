@@ -3,10 +3,15 @@ import "./App.css";
 //Note: Had to seperately install axios with 'npm install axios --save'. See if this is a recurring problem
 import axios from 'axios';
 import NasaPage from "./components/NasaPage.js"
+import styled from "styled-components";
 
 
 
-
+const WrapperDiv = styled.div`
+text-align: center;
+background-color: #070B34;
+color: white;
+`;
 
 
 export default function App() {
@@ -44,11 +49,11 @@ export default function App() {
     //     app! Have fun <span role="img" aria-label='go!'>🚀</span>!
     //   </p>
     // </div>
-    <div>
+    <WrapperDiv>
       
        <NasaPage passedData = {spaceData}/>
        {/* <NasaPage image = {spaceData.url} description = {spaceData.explanation}/> */}
-    </div>
+    </WrapperDiv>
     
   );
 };
